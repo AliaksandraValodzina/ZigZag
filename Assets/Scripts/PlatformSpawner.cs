@@ -63,6 +63,7 @@ public class PlatformSpawner : MonoBehaviour
         if (rand < 1)
         {
             Instantiate(diamonds, new Vector3(pos.x, pos.y + 1, pos.z), diamonds.transform.rotation);
+            // Instantiate(diamonds, transform.position, Quaternion.identity);
         }
     }
 
@@ -78,6 +79,7 @@ public class PlatformSpawner : MonoBehaviour
         if (rand < 1)
         {
             Instantiate(diamonds, new Vector3(pos.x, pos.y + 1, pos.z), diamonds.transform.rotation);
+            // Instantiate(diamonds, new Vector3(pos.x, pos.y + 1, pos.z), diamonds.transform.rotation);
         }
     }
 }
