@@ -508,6 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad79cea5dd4818040a229ac2a2b14a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: 0
 --- !u!4 &345968473
 Transform:
   m_ObjectHideFlags: 0
@@ -1380,7 +1381,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1579661649}
+      - m_Target: {fileID: 0}
         m_MethodName: ResetFunction
         m_Mode: 1
         m_Arguments:
@@ -1572,7 +1573,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1418978431
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1758,15 +1759,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1579661648}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d29ed38da3330b047a234336e03c8e44, type: 3}
+  m_Script: {fileID: 11500000, guid: 514b98bc97eef1c4c849d66f863cf455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zigZagPanel: {fileID: 1819621998}
-  gameOverPanel: {fileID: 2101763035}
-  tabText: {fileID: 1418978430}
-  score: {fileID: 712017093}
-  highScoreOne: {fileID: 1469771925}
-  highScoreTwo: {fileID: 1469771925}
+  ZigZagPanel: {fileID: 1819621998}
+  GameOverPanel: {fileID: 2101763035}
+  tapText: {fileID: 1418978430}
+  score: {fileID: 0}
+  highScoreOne: {fileID: 0}
+  highScoreTwo: {fileID: 0}
 --- !u!4 &1579661650
 Transform:
   m_ObjectHideFlags: 0
@@ -2047,6 +2048,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855547399}
   m_CullTransparentMesh: 0
+--- !u!1 &1872977533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1872977535}
+  - component: {fileID: 1872977534}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1872977534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872977533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab600cec86df0ee4780e60c86d129b8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  highScore: 0
+--- !u!4 &1872977535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872977533}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.1183121, y: 0.9289012, z: 2.7693179}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2101763035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,7 +2106,7 @@ GameObject:
   - component: {fileID: 2101763038}
   - component: {fileID: 2101763037}
   m_Layer: 5
-  m_Name: GameOverPanelHolder
+  m_Name: GameOverPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,22 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class UIMAnager : MonoBehaviour
+public class UiManager : MonoBehaviour
 {
-    public static UIMAnager instance;
-    public GameObject zigZagPanel;
-    public GameObject gameOverPanel;
-    public GameObject tabText;
+    public static UiManager instance;
+    public GameObject ZigZagPanel;
+    public GameObject GameOverPanel;
+    public GameObject tapText;
     public Text score;
     public Text highScoreOne;
     public Text highScoreTwo;
 
     private void Awake()
     {
-        if (instance = null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -25,19 +25,19 @@ public class UIMAnager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     public void GameStart()
     {
-        tabText.SetActive(false);
-        zigZagPanel.GetComponent<Animator>().Play("panelUp");
+        tapText.SetActive(false);
+        ZigZagPanel.GetComponent<Animator>().Play("panelUp");
     }
 
     public void GameOver()
     {
-        gameOverPanel.SetActive(true);
-
+        GameOverPanel.SetActive(true);
+        // GameOverPanel.GetComponent<Animator>().Play("GameOverPanelAppear");
     }
 
     public void ResetFunction()
@@ -48,6 +48,6 @@ public class UIMAnager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
