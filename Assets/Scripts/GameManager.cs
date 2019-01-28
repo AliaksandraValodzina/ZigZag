@@ -31,11 +31,13 @@ public class GameManager : MonoBehaviour
     {
         UiManager.instance.GameStart();
         ScoreManager.instance.StartScore();
+        GameObject.Find("PlatformSpowner").GetComponent<PlatformSpawner>().StartSpawningPlatform();
     }
 
     public void GameOver()
     {
         UiManager.instance.GameOver();
         ScoreManager.instance.StopScore();
+        gameOver = true;
     }
 }

@@ -25,7 +25,7 @@ public class UiManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        highScoreOne.text = "High Score: " + PlayerPrefs.GetInt("highScore");
     }
 
     public void GameStart()
@@ -36,8 +36,9 @@ public class UiManager : MonoBehaviour
 
     public void GameOver()
     {
+        score.text = PlayerPrefs.GetInt("score").ToString();
+        highScoreTwo.text = PlayerPrefs.GetInt("highScore").ToString();
         GameOverPanel.SetActive(true);
-        // GameOverPanel.GetComponent<Animator>().Play("GameOverPanelAppear");
     }
 
     public void ResetFunction()
